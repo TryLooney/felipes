@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { headers } from "next/headers";
 
+import { Analytics } from "@vercel/analytics/react";
 import { TRPCReactProvider } from "~/trpc/react";
 import { Footer } from "./components/footer";
 import { Providers } from "./components/providers";
@@ -35,6 +36,7 @@ export default function RootLayout({
           <Providers>
             {children}
             <Footer />
+            <Analytics />
           </Providers>
         </TRPCReactProvider>
       </body>
