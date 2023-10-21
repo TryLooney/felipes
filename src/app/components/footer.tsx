@@ -7,6 +7,7 @@ import {
   DropdownMenu,
   DropdownTrigger,
   Link,
+  Spinner,
   Tooltip,
 } from "@nextui-org/react";
 import { Github, Laptop, Moon, Sun } from "lucide-react";
@@ -54,8 +55,10 @@ export function Footer() {
             <Button variant="light" isIconOnly>
               {currentTheme === "dark" ? (
                 <Moon className="h-6 w-6" />
-              ) : (
+              ) : currentTheme === "light" ? (
                 <Sun className="h-6 w-6" />
+              ) : (
+                <Spinner size="sm" />
               )}
             </Button>
           </DropdownTrigger>
