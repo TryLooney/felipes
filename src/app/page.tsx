@@ -1,12 +1,23 @@
 "use client";
 
-import { Image, Link } from "@nextui-org/react";
+import { Button, Image, Link } from "@nextui-org/react";
 import MaxHeightWrapper from "./components/max-height-wrapper";
 
 export default function Home() {
   return (
     <>
       <MaxHeightWrapper className="flex min-h-screen flex-col items-center justify-center space-y-8">
+        <Button
+          as={Link}
+          href="https://dashinteractives.com"
+          isExternal
+          color="primary"
+          variant="shadow"
+          radius="full"
+          className="absolute top-12 lg:top-32"
+        >
+          Atualmente em Dash Interactives
+        </Button>
         <div className="flex w-full flex-col items-center justify-center space-y-4 lg:flex-row lg:space-x-8">
           <Image
             alt="Luis Felipe"
@@ -31,7 +42,7 @@ export default function Home() {
             </Link>{" "}
             e conhecer mais sobre{" "}
             <Link href="/aboutme" className="text-lg text-blue-500">
-              minha jornada emocionante
+              minha jornada
             </Link>
             .
           </p>
