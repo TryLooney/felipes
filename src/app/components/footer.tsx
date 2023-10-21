@@ -49,7 +49,7 @@ export function Footer() {
         </Button>
       </div>
       <div className="flex items-center justify-end">
-        <Dropdown size="sm">
+        <Dropdown size="sm" showArrow>
           <DropdownTrigger>
             <Button variant="light" isIconOnly>
               {currentTheme === "dark" ? (
@@ -59,7 +59,12 @@ export function Footer() {
               )}
             </Button>
           </DropdownTrigger>
-          <DropdownMenu onAction={(key) => setTheme(key.toString())}>
+          <DropdownMenu
+            itemClasses={{
+              base: "transition duration-500",
+            }}
+            onAction={(key) => setTheme(key.toString())}
+          >
             <DropdownItem
               key="system"
               endContent={<Laptop className="h-5 w-5" />}

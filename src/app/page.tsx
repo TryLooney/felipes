@@ -1,6 +1,7 @@
 "use client";
 
-import { Button, Image, Link } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
+import Image from "next/image";
 import MaxHeightWrapper from "./components/max-height-wrapper";
 
 export default function Home() {
@@ -23,7 +24,8 @@ export default function Home() {
             alt="Luis Felipe"
             src="/pfp.jpeg"
             width={128}
-            isBlurred
+            height={128}
+            quality={100}
             className="rounded-full"
           />
           <h1 className="bg-gradient-to-r from-foreground-800 to-foreground-500 bg-clip-text text-6xl font-extrabold text-transparent">
